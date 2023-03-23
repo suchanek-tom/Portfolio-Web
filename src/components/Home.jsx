@@ -1,6 +1,6 @@
 import Nav from "./Nav"
 import { TypeAnimation } from "react-type-animation"
-
+import Image from "../images/Web-designer.webp"
 
 const Home = () => {
 
@@ -12,7 +12,7 @@ const Home = () => {
 
                 {/* Left */}
                 <div className="w-1/2 ">
-                    <h1 className=" px-12 mt-8 font-semibold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
+                    <h1 className=" px-12 mt-24 font-semibold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                         Tomáš Suchanek
                     </h1>
 
@@ -32,6 +32,12 @@ const Home = () => {
 
                     {/* Accounts */}
                     <div className="flex px-14 mt-10">
+
+                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mr-4"
+                                type="button"
+                                >
+                            <a href="https://www.instagram.com/tsuchanek_/" target="_blank">instagram</a>
+                        </button>
                         
                         <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4"
                                 type="button"
@@ -49,8 +55,8 @@ const Home = () => {
                 </div>
 
                 {/* Right */}
-                <div className="w-1/2">
-                
+                <div className="w-1/2 ">
+                    <img src={Image} alt="Img" className=" h-96 block mx-auto mt-20" />
                 </div>
 
             </section>
