@@ -33,19 +33,19 @@ const Home = () => {
                     {/* Accounts */}
                     <div className="flex px-14 mt-10">
 
-                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mr-4"
+                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mr-4 rounded"
                                 type="button"
                                 >
                             <a href="https://www.instagram.com/tsuchanek_/" target="_blank">instagram</a>
                         </button>
                         
-                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4"
+                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4 rounded"
                                 type="button"
                                 >
                             <a href="https://github.com/suchanek-tom" target="_blank">GitHub</a>
                         </button>
 
-                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4"
+                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4 rounded"
                                 type="button"
                                 >
                             <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-suchanek/" target="_blank">LinkedIn</a>

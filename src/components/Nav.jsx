@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 const Nav = () =>{
     return(
         <div>
-            <nav className=" ">
+            <nav className=" pt-3">
                 <ul className=" flex py-4 text-white text-3xl justify-end mx-8">
                 <span className=" block mr-auto ml-5">
                     Portfolio
