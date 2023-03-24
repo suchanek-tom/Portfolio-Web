@@ -6,13 +6,13 @@ const allProjects = [
         id: 1,
         image: image1,
         title: "Green Deal",
-        description: "sample text",
+        description: "Simple website on the topic of green deal, which I won in competiton for students",
     },
     {
         id: 2,
         image: image2,
-        title: "PC Pohotovost Ka",
-        description: "another sample text",
+        title: "PC Pohotovost Karviná",
+        description: "Web ",
     },
 ]
 

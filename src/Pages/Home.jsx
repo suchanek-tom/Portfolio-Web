@@ -1,11 +1,11 @@
-import Nav from "./Nav"
+import Nav from "../components/Nav"
 import { TypeAnimation } from "react-type-animation"
 import Image from "../images/Web-designer.webp"
 
 const Home = () => {
 
     return(
-        <>
+        <div className=" h-screen">
             <Nav />
 
             <section className="flex">
@@ -37,7 +37,7 @@ const Home = () => {
                         <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mr-4 rounded"
                                 type="button"
                                 >
-                            <a href="https://www.instagram.com/tsuchanek_/" target="_blank">instagram</a>
+                            <a href="https://www.instagram.com/tsuchanek_/" target="_blank">Instagram</a>
                         </button>
                         
                         <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4 rounded"
@@ -62,7 +62,7 @@ const Home = () => {
 
             </section>
           
-        </>
+        </div>
     )
 }
 

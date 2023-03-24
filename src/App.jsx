@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Home from "./components/Home"
-import Contact from "./components/Contact"
-import Error from "./components/Error"
-import Projects from "./components/Projects"
-import About from "./components/About"
+import Home from "./Pages/Home"
+import Contact from "./Pages/Contact"
+import Error from "./Pages/Error"
+import Projects from "./Pages/Projects"
+import About from "./Pages/About"
 
 
 const App = () => {
   return(
-    <div className=" bg-slate-800 h-screen text-white">
+    <div className=" bg-slate-800 text-white">
        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>

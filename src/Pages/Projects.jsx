@@ -1,5 +1,6 @@
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import data from "../data";
+import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
@@ -46,7 +47,7 @@ const Projects = () =>{
             <div className=" border-2 w-fit block mx-auto shadow shadow-white">
                 <img src={image} alt="image" className=" h-56 md:h-80 block mx-auto border-b-2"/>
                 <h2 className=" text-center text-2xl p-2 font-semibold">{title}</h2>
-                <p className=" text-center font-light text-lg">{description}</p>
+                <p className=" text-center font-light text-lg w-1/2 block mx-auto">{description}</p>
                     <div className="text-center mt-3">
                         <button className=" text-2xl md:text-3xl cursor-pointer bg-transparent text-yellow-500 px-2 hover:text-yellow-700 duration-500">
                             <FaArrowAltCircleLeft onClick={previousProject} />
@@ -56,6 +57,8 @@ const Projects = () =>{
                         </button>
                     </div>
             </div>
+
+            <Footer/>
         </>
     )
 }
