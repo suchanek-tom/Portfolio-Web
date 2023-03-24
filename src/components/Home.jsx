@@ -12,7 +12,8 @@ const Home = () => {
 
                 {/* Left */}
                 <div className="w-1/2 ">
-                    <h1 className=" px-12 mt-24 font-semibold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
+                    <h1 className="mt-24 px-12 text-4xl">Hello, I am</h1>
+                    <h1 className=" px-12 mt-2 font-semibold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                         Tomáš Suchanek
                     </h1>
 

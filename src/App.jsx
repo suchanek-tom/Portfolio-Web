@@ -4,6 +4,7 @@ import Home from "./components/Home"
 import Contact from "./components/Contact"
 import Error from "./components/Error"
 import Projects from "./components/Projects"
+import About from "./components/About"
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />}/>
           <Route path="/contact" element={<Contact />}/>
           <Route path="/projects" element={<Projects />}/>
+          <Route path="/About" element={<About />}/>
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

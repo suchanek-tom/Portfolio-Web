@@ -14,6 +14,11 @@ const Nav = () =>{
                         }>Home</NavLink>
                     </li>
                     <li className="mx-5 hover:text-yellow-500 duration-500 active:text-yellow-500">
+                        <NavLink to="/about"  className={({ isActive }) =>
+                            isActive ? "text-yellow-500" : ""
+                        }>About</NavLink>
+                    </li>
+                    <li className="mx-5 hover:text-yellow-500 duration-500 active:text-yellow-500">
                         <NavLink to="/projects" className={({ isActive }) =>
                             isActive ? "text-yellow-500" : ""
                         }>Projects</NavLink>
