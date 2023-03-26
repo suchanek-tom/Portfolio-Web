@@ -8,7 +8,7 @@ const Home = () => {
         <div className=" h-screen">
             <Nav />
 
-            <section className="flex">
+            <section className=" md:flex md:items-center">
 
                 {/* Left */}
                 <div className="w-1/2 ">
