@@ -17,6 +17,8 @@ const About = () =>{
         <div className=" h-screen">
             <Nav/>
 
+            {/* SET RESPONSIVE DESIGN */}
+
             {/* About me */}
             <h1 className="px-12 pt-5 font-semibold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                 About

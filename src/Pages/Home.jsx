@@ -2,6 +2,11 @@ import Nav from "../components/Nav"
 import { TypeAnimation } from "react-type-animation"
 import Image from "../images/Web-designer.webp"
 
+// ICONS
+import { SiGithub } from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
+
 const Home = () => {
 
     return(
@@ -34,22 +39,22 @@ const Home = () => {
                     {/* Accounts */}
                     <div className="flex px-14 mt-10">
 
-                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mr-4 rounded"
+                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-3 py-2 font-semibold text-2xl hover:text-black duration-500 mr-4 rounded"
                                 type="button"
                                 >
-                            <a href="https://www.instagram.com/tsuchanek_/" target="_blank">Instagram</a>
+                            <a href="https://www.instagram.com/tsuchanek_/" target="_blank"><SiInstagram/></a>
                         </button>
                         
-                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4 rounded"
+                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-3 py-2 font-semibold text-2xl hover:text-black duration-500 mx-4 rounded"
                                 type="button"
                                 >
-                            <a href="https://github.com/suchanek-tom" target="_blank">GitHub</a>
+                            <a href="https://github.com/suchanek-tom" target="_blank" className=" flex items-center"><SiGithub/></a>
                         </button>
 
-                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-4 py-1 font-semibold text-2xl hover:text-black duration-500 mx-4 rounded"
+                        <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-3 py-2 font-semibold text-2xl hover:text-black duration-500 mx-4 rounded"
                                 type="button"
                                 >
-                            <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-suchanek/" target="_blank">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-suchanek/" target="_blank"><SiLinkedin/></a>
                         </button>
 
                     </div>
