@@ -10,19 +10,19 @@ import { SiInstagram } from "react-icons/si";
 const Home = () => {
 
     return(
-        <div className=" h-screen">
+        <div className=" md:h-screen">
             <Nav />
 
-            <section className=" md:flex md:items-center">
+            <section className=" flex-grow md:flex md:items-center">
 
                 {/* Left */}
-                <div className="w-1/2 ">
-                    <h1 className="mt-24 px-12 text-4xl">Hello, I am</h1>
-                    <h1 className=" px-12 mt-2 font-semibold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
+                <div className="md:w-1/2 w-screen">
+                    <h1 className="mt-24 px-12 text-2xl md:text-4xl">Hello, I am</h1>
+                    <h1 className=" px-12 mt-2 font-semibold text-transparent text-5xl md:text-7xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                         Tomáš Suchanek
                     </h1>
 
-                    <p className="px-14 mt-8 text-3xl text-white font-semibold">
+                    <p className="px-14 mt-8 text-xl md:text-3xl text-white font-semibold">
                         <TypeAnimation
                             sequence={[
                                 'Web developer', 
@@ -37,7 +37,7 @@ const Home = () => {
                     </p>
 
                     {/* Accounts */}
-                    <div className="flex px-14 mt-10">
+                    <div className="flex justify-center md:justify-start px-14 mt-10">
 
                         <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-3 py-2 font-semibold text-2xl hover:text-black duration-500 mr-4 rounded"
                                 type="button"
@@ -61,7 +61,7 @@ const Home = () => {
                 </div>
 
                 {/* Right */}
-                <div className="w-1/2 ">
+                <div className="md:w-1/2 w-full">
                     <img src={Image} alt="Img" className=" h-96 block mx-auto mt-20" />
                 </div>
 

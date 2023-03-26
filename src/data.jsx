@@ -1,5 +1,6 @@
 import image1 from "./images/Slider/Green-Deal-Web-1.png"
 import image2 from "./images/Slider/PC-Pohotovost-Web.png"
+import image3 from "./images/Slider/informationBoard.png"
 
 const allProjects = [
     {
@@ -11,8 +12,14 @@ const allProjects = [
     {
         id: 2,
         image: image2,
-        title: "PC Pohotovost Karviná",
-        description: "Web ",
+        title: "PC Pohotovost Karvina",
+        description: "One of my first project. This project was created only in HTML amd CSS",
+    },
+    {
+        id: 2,
+        image: image3,
+        title: "Information Board",
+        description: "This advanced school project based on Symfony",
     },
 ]
 
