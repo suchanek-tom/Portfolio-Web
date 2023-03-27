@@ -1,5 +1,7 @@
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 // ICONS
 import { SiGithub } from "react-icons/si";
@@ -8,15 +10,53 @@ import { SiInstagram } from "react-icons/si";
 
 
 const Contact = () =>{
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_xg88qyq', form.current, 'Z9LC9eeqfJb8vTkL7')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    };
+
     return(
-        <div className=" h-screen">
+        <div className=" md:h-screen">
             <Nav/>
             <h1 className=" px-12 p-5 font-semibold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
-                Contact
+                Contact me
             </h1>
 
+            {/* Contact Form */}
+            <section className=" text-black flex justify-center">
+                <form id="form" ref={form} onSubmit={sendEmail} className="space-y-8">
+
+                    <div>
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your name</label>
+                        <input type="text" name="name" className=" p-1 rounded-md" />
+                    </div>
+
+                    <div>
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                        <input type="email" name="fromnaem" placeholder="name@mail.com" className="p-1 rounded-md"/>                        
+                    </div>
+
+                    <div>
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Message</label>
+                        <textarea name="message" placeholder="Leave a comment..." rows={6} className="w-full p-1 rounded-md" />
+                    </div>
+
+                    <input type="submit" value="Send" className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500"/>
+
+                </form>
+            </section>
+
             {/* Accounts */}
-                <div className="flex px-14 mt-10">
+                <div className="flex justify-center px-14 mt-10">
                     <button className="bg-gradient-to-l from-yellow-900 to-yellow-700 px-3 py-2 font-semibold text-2xl hover:text-black duration-500 mr-4 rounded"
                             type="button"
                             >
@@ -39,7 +79,7 @@ const Contact = () =>{
 
             {/* Footer */}
             <div>
-                <Footer />
+                <Footer className="lg:fixed w-screen bottom-0 left-0"/>
             </div>
 
         </div>
