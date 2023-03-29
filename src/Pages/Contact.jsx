@@ -25,14 +25,14 @@ const Contact = () =>{
     };
 
     return(
-        <div className=" h-full">
+        <div className=" h-screen">
             <Nav/>
-            <h1 className=" px-12 p-5 font-semibold text-transparent text-center md:text-left text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
+            <h1 className=" px-12 p-5 font-semibold text-transparent text-center md:text-left text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                 Contact me
             </h1>
 
             {/* Contact Form */}
-            <section className=" text-black flex justify-center">
+            {/* <section className=" text-black flex justify-center">
                 <form id="form" ref={form} onSubmit={sendEmail} className="space-y-3">
 
                     <div>
@@ -53,7 +53,7 @@ const Contact = () =>{
                     <input type="submit" value="Send" className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer"/>
 
                 </form>
-            </section>
+            </section> */}
 
             {/* Accounts */}
                 <div className="flex justify-center px-14 mt-10">
@@ -78,8 +78,8 @@ const Contact = () =>{
 
 
             {/* Footer */}
-            <div>
-                <Footer className="lg:fixed w-screen bottom-0 left-0"/>
+            <div className=" fixed bottom-0 left-0 w-screen">
+                <Footer />
             </div>
 
         </div>
