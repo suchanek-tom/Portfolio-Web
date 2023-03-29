@@ -27,8 +27,9 @@ const Home = () => {
                             sequence={[
                                 'Web developer', 
                                 4000, 
-                                'Frontend developer',
+                                'Student',
                                 4000,
+                                ''
                             ]}
                                 wrapper="span"
                                 cursor={true}

@@ -37,24 +37,24 @@ const Nav = () => {
             
             {/* Links */}
             <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
-                <div className="text-sm lg:flex lg:flex-grow justify-end">
+                <div className="text-sm lg:flex lg:flex-grow justify-end text-center">
 
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500">
+                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
                         <NavLink to="/"  className={({ isActive }) =>
                             isActive ? "text-yellow-500" : ""
                         }>Home</NavLink>
                     </div>
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500">
+                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
                         <NavLink to="/about"  className={({ isActive }) =>
                             isActive ? "text-yellow-500" : ""
                         }>About</NavLink>
                     </div>
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500">
+                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
                         <NavLink to="/projects" className={({ isActive }) =>
                             isActive ? "text-yellow-500" : ""
                         }>Projects</NavLink>
                     </div>
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500">
+                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
                         <NavLink to="/contact" className={({ isActive }) =>
                             isActive ? "text-yellow-500" : ""
                         }>Contact</NavLink>

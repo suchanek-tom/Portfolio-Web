@@ -25,32 +25,32 @@ const Contact = () =>{
     };
 
     return(
-        <div className=" md:h-screen">
+        <div className=" h-full">
             <Nav/>
-            <h1 className=" px-12 p-5 font-semibold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
+            <h1 className=" px-12 p-5 font-semibold text-transparent text-center md:text-left text-4xl md:text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                 Contact me
             </h1>
 
             {/* Contact Form */}
             <section className=" text-black flex justify-center">
-                <form id="form" ref={form} onSubmit={sendEmail} className="space-y-8">
+                <form id="form" ref={form} onSubmit={sendEmail} className="space-y-3">
 
                     <div>
-                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your name</label>
+                        <label className="block mb-2 text-sm font-medium text-white">Your name</label>
                         <input type="text" name="name" className=" p-1 rounded-md" />
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                        <label className="block mb-2 text-sm font-medium text-white">Your email</label>
                         <input type="email" name="fromnaem" placeholder="name@mail.com" className="p-1 rounded-md"/>                        
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Message</label>
-                        <textarea name="message" placeholder="Leave a comment..." rows={6} className="w-full p-1 rounded-md" />
+                        <label className="block mb-2 text-sm font-medium text-white">Message</label>
+                        <textarea name="message" placeholder="Leave a comment..." rows={4} className="w-full p-1 rounded-md" />
                     </div>
 
-                    <input type="submit" value="Send" className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500"/>
+                    <input type="submit" value="Send" className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer"/>
 
                 </form>
             </section>
