@@ -11,6 +11,15 @@ import { SiInstagram } from "react-icons/si";
 
 const Contact = () =>{
 
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    // Handle Submit
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
+    // EMAIL SEND
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -38,20 +47,37 @@ const Contact = () =>{
 
                     <div className=" ">
                         <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your name</label>
-                        <input type="text" name="name" className=" p-1 rounded-md w-full" placeholder="E. g. Joe" required />
+                        <input type="text" 
+                                name="name" 
+                                className=" p-1 rounded-md w-full" 
+                                placeholder="E. g. Joe"
+                           
+                                 required />
                     </div>
 
                     <div>
                         <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your email</label>
-                        <input type="email" name="from_name" placeholder="name@mail.com" className="p-1 rounded-md w-full" required />                        
+                        <input type="email" 
+                                name="from_name" 
+                                placeholder="name@mail.com" 
+                                className="p-1 rounded-md w-full" 
+                            
+                                required />                        
                     </div>
 
                     <div>
                         <label className="block mb-2 text-sm md:text-lg font-medium text-white">Message</label>
-                        <textarea name="message" placeholder="Leave a comment..." rows={4} className="w-full p-1 rounded-md" required />
+                        <textarea name="message" 
+                                    placeholder="Leave a comment..." 
+                                    rows={4} 
+                                    className="w-full p-1 rounded-md" 
+                            
+                                    required />
                     </div>
 
-                    <input type="submit" value="send" className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer" onReset={e.target.value}/>
+                    <input type="submit" 
+                            value="send" 
+                            className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer" />
 
                 </form>
             </section>
