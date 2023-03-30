@@ -1,6 +1,6 @@
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 // ICONS
@@ -16,13 +16,14 @@ const Contact = () =>{
     const sendEmail = (e) => {
         e.preventDefault();
 
-    emailjs.sendForm('gmail', 'template_xg88qyq', form.current, 'Z9LC9eeqfJb8vTkL7')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    };
+        
+            emailjs.sendForm('service_ehvonut', 'template_xg88qyq', form.current, 'Z9LC9eeqfJb8vTkL7')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            };
 
     return(
         <div className=" h-screen">
@@ -32,28 +33,28 @@ const Contact = () =>{
             </h1>
 
             {/* Contact Form */}
-            {/* <section className=" text-black flex justify-center">
-                <form id="form" ref={form} onSubmit={sendEmail} className="space-y-3">
+            <section className=" text-black flex justify-center mt-3">
+                <form id="form" ref={form} onSubmit={sendEmail} className="space-y-3 w-1/2">
 
-                    <div>
-                        <label className="block mb-2 text-sm font-medium text-white">Your name</label>
-                        <input type="text" name="name" className=" p-1 rounded-md" />
+                    <div className=" ">
+                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your name</label>
+                        <input type="text" name="name" className=" p-1 rounded-md w-full" placeholder="E. g. Joe" required />
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-sm font-medium text-white">Your email</label>
-                        <input type="email" name="fromnaem" placeholder="name@mail.com" className="p-1 rounded-md"/>                        
+                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your email</label>
+                        <input type="email" name="from_name" placeholder="name@mail.com" className="p-1 rounded-md w-full" required />                        
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-sm font-medium text-white">Message</label>
-                        <textarea name="message" placeholder="Leave a comment..." rows={4} className="w-full p-1 rounded-md" />
+                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Message</label>
+                        <textarea name="message" placeholder="Leave a comment..." rows={4} className="w-full p-1 rounded-md" required />
                     </div>
 
-                    <input type="submit" value="Send" className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer"/>
+                    <input type="submit" value="send" className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer" onReset={e.target.value}/>
 
                 </form>
-            </section> */}
+            </section>
 
             {/* Accounts */}
                 <div className="flex justify-center px-14 mt-10">
