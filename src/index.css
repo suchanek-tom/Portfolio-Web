@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+
+/* SLIDER */
+article.active-slide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+article.last-slide {
+    transform: translateX(-100%);
+}
+
+
+article.next-slide {
+    transform: translateX(100%)
+}

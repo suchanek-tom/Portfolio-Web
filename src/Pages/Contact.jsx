@@ -11,31 +11,21 @@ import { SiInstagram } from "react-icons/si";
 
 const Contact = () =>{
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    // Handle Submit
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
-
     // EMAIL SEND
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-
         
             emailjs.sendForm('service_ehvonut', 'template_xg88qyq', form.current, 'Z9LC9eeqfJb8vTkL7')
             .then((result) => {
                 console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
             });
+                console.log(error.text);
             };
 
     return(
-        <div className=" h-screen">
+        <div className=" h-full">
             <Nav/>
             <h1 className=" px-12 p-5 font-semibold text-transparent text-center md:text-left text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                 Contact me
@@ -51,8 +41,7 @@ const Contact = () =>{
                                 name="name" 
                                 className=" p-1 rounded-md w-full" 
                                 placeholder="E. g. Joe"
-                           
-                                 required />
+                                required />
                     </div>
 
                     <div>
@@ -61,7 +50,6 @@ const Contact = () =>{
                                 name="from_name" 
                                 placeholder="name@mail.com" 
                                 className="p-1 rounded-md w-full" 
-                            
                                 required />                        
                     </div>
 
@@ -71,13 +59,14 @@ const Contact = () =>{
                                     placeholder="Leave a comment..." 
                                     rows={4} 
                                     className="w-full p-1 rounded-md" 
-                            
                                     required />
                     </div>
 
+                    {/* Input Submit */}
                     <input type="submit" 
-                            value="send" 
-                            className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer" />
+                            value="Send" 
+                            className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer" 
+                            />
 
                 </form>
             </section>
@@ -105,7 +94,7 @@ const Contact = () =>{
 
 
             {/* Footer */}
-            <div className=" fixed bottom-0 left-0 w-screen">
+            <div className=" lg:fixed bottom-0 left-0 w-screen">
                 <Footer />
             </div>
 

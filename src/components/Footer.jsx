@@ -4,7 +4,7 @@ const Footer = () =>{
         <footer>
             <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
                 <span class="text-sm text-gray-300 sm:text-center dark:text-gray-400">
-                    © 2023 <a href="https://flowbite.com/" class="hover:underline">Portfolio</a>. Tomáš Suchanek
+                    © 2023 Tomáš Suchanek
                 </span>
                 <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-300 dark:text-gray-400 sm:mt-0">
                     <li>
