@@ -1,3 +1,5 @@
+import React from "react"
+
 import image1 from "./images/Projects/Green-Deal-Web-1.png"
 import image2 from "./images/Projects/PC-Pohotovost-Web.png"
 import image3 from "./images/Projects/informationBoard.png"
