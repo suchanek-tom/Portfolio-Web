@@ -1,3 +1,4 @@
+import React from "react";
 
 const TextareaField = (props) => {
     const { handleChange, label, name, value } = props;
@@ -10,6 +11,7 @@ const TextareaField = (props) => {
             rows="4" 
             className="w-full border-b-2 outline-none p-1 rounded-md" 
             value={value} 
+            placeholder="Leave a comment..."
             required
         ></textarea>
       </div>

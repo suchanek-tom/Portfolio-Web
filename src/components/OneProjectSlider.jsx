@@ -8,7 +8,7 @@ const OneProjectSlider = () =>{
     const[projectList, setProjectList] = useState(data)
 
     return (
-        <section className=" md:grid md:grid-cols-2 xl:grid-cols-3 px-12 md:p-5">
+        <section className=" md:grid md:grid-cols-2 xl:grid-cols-3 px-8 md:p-5">
              {
                 projectList.map( (oneProject) =>{
                     const {id, image, title, description, link} = oneProject

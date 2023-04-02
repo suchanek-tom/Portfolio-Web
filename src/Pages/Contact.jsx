@@ -23,10 +23,10 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_ehvonut', 'template_xg88qyq', values, 'Z9LC9eeqfJb8vTkL7')
+        emailjs.send('service_ehvonut', 'template_xg88qyq', values, 'Z9LC9eeqfJb8vTkL7')
           .then(response => {
             console.log('SUCCESS!', response);
-            setValues({
+            setValues({ 
               fullName: '',
               email: '',
               message: ''
@@ -52,20 +52,14 @@ const Contact = () => {
         }))
     }
 
-    // EMAIL SEND
-    // const form = useRef();
-
-    // const sendEmail = (e) => {
-    //         e.preventDefault();
-    //         emailjs.sendForm('service_ehvonut', 'template_xg88qyq', form.current, 'Z9LC9eeqfJb8vTkL7')
-    //         .then((response) => {
-    //             console.log('SUCCES', response);
-    //         });
-    //             console.log(error.text);
-    //         };
+    const renderAlert = () => (
+        <div className=" font-semibold text-lg md:text-xl text-white text-center bg-slate-900 h-fit w-fit p-1 m-2 rounded-md block mx-auto">
+          <p>Your message was submitted successfully!</p>
+        </div>
+      )
 
     return(
-        <div className=" lg:h-screen h-full">
+        <div className=" h-screen">
 
             <Nav/>
 
@@ -74,26 +68,16 @@ const Contact = () => {
                 </h1>
 
             {/* Contact Form */}
+            { status && renderAlert()}
             <section className=" text-black flex justify-center mt-3">
-                {status && renderAlert()}
                 <form onSubmit={handleSubmit} className="space-y-3 w-1/2">
-
-                    {/* <div className=" ">
-                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your name</label>
-                        <input type="text" 
-                                value={values.firstName}
-                                handleChange={handleChange}
-                                className=" p-1 rounded-md w-full" 
-                                placeholder="E. g. Joe"
-                                required />
-                    </div> */}
 
                     {/* NAME */}
                     <InputField 
-                                value={values.Name}
+                                value={values.fullName}
                                 handleChange={handleChange}
-                                label="Your name"
-                                name="Name"
+                                label="Full name"
+                                name="fullName"
                                 type="text"
                                 placeholder="E. g. Joe"
                     />
@@ -105,42 +89,16 @@ const Contact = () => {
                                 label="E-mail"
                                 name="email"
                                 type="email"
-                                placeholder="name@mail.com" 
+                                placeholder="Joe@example.com" 
                     />
 
-                    {/* <div>
-                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your email</label>
-                        <input type="email" 
-                                value={values.email}
-                                label="Your email"
-                                handleChange={handleChange}
-                                placeholder="name@mail.com" 
-                                className="p-1 rounded-md w-full" 
-                                required />                        
-                    </div> */}
-
-                    {/* <div>
-                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Message</label>
-                        <textarea 
-                                    placeholder="Leave a comment..." 
-                                    value={values.message}
-                                    handleChange={handleChange}
-                                    rows={4} 
-                                    className="w-full p-1 rounded-md" 
-                                    required />
-                    </div> */}
+                 
 
                     <TextareaField  value={values.message} 
                                     handleChange={handleChange} 
                                     label="Your message" 
                                     name="message"    
                      />
-
-              
-                    {/* <input type="submit" 
-                            value="Send" 
-                            className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer" 
-                            /> */}
 
                             <button type="submit"
                                     className="w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer"
@@ -173,19 +131,12 @@ const Contact = () => {
 
 
             {/* Footer */}
-            <div className=" lg:fixed bottom-0 left-0 w-screen">
+            <div className=" fixed bottom-0 left-0 w-screen">
                 <Footer />
             </div>
 
         </div>
     )
 }
-
-const renderAlert = () => (
-    <div className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded mb-5 text-center">
-      <p>your message submitted successfully</p>
-    </div>
-  )
-
 
 export default Contact
