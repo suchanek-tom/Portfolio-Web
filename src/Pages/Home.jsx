@@ -2,7 +2,7 @@ import React  from "react";
 import Nav from "../components/Nav"
 import { TypeAnimation } from "react-type-animation"
 
-import Image from '../../dist/assets/Web-designer-31c43f73.webp'
+import { Image } from '../../dist/assets/Web-designer-31c43f73.webp'
 
 // ICONS
 import { SiGithub } from "react-icons/si";
@@ -65,7 +65,7 @@ const Home = () => {
 
                 {/* Right */}
                 <div className="md:w-1/2 w-full">
-                    <img src="../../dist/assets/Web-designer-31c43f73.webp" alt="Img" className=" h-96 block mx-auto mt-20" />
+                    <img src={Image} alt="Img" className=" h-96 block mx-auto mt-20" />
                 </div>
 
             </section>
