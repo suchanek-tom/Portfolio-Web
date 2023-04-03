@@ -1,7 +1,9 @@
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
-import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser';
+import TextareaField from "../components/Inputs/TextareaField";
+import InputField from "../components/Inputs/InputField";
+import { useEffect, useState } from "react";
+import emailjs from 'emailjs-com';
 
 // ICONS
 import { SiGithub } from "react-icons/si";
@@ -9,67 +11,102 @@ import { SiLinkedin } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
 
 
-const Contact = () =>{
 
-    // EMAIL SEND
-    const form = useRef();
+const Contact = () => {
 
-    const sendEmail = (e) => {
+    const [values, setValues] = useState({
+        fullName: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState('');
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        
-            emailjs.sendForm('service_ehvonut', 'template_xg88qyq', form.current, 'Z9LC9eeqfJb8vTkL7')
-            .then((result) => {
-                console.log(result.text);
+        emailjs.send('service_ehvonut', 'template_xg88qyq', values, 'Z9LC9eeqfJb8vTkL7')
+          .then(response => {
+            console.log('SUCCESS!', response);
+            setValues({ 
+              fullName: '',
+              email: '',
+              message: ''
             });
-                console.log(error.text);
-            };
+            setStatus('SUCCESS');
+          }, error => {
+            console.log('FAILED...', error);
+          });
+      }
+
+      useEffect(() => {
+        if(status === 'SUCCESS'){
+            setTimeout(() => {
+                setStatus('');
+            }, 3000);
+        }
+      }, [status]);
+
+      const handleChange = (e) => {
+        setValues(values => ({
+          ...values,
+          [e.target.name]: e.target.value
+        }))
+    }
+
+    const renderAlert = () => (
+        <div className=" font-semibold text-lg md:text-xl text-white text-center bg-slate-900 h-fit w-fit p-1 m-2 rounded-md block mx-auto">
+          <p>Your message was submitted successfully!</p>
+        </div>
+      )
 
     return(
-        <div className=" h-full">
+        <div className=" h-screen">
+
             <Nav/>
-            <h1 className=" px-12 p-5 font-semibold text-transparent text-center md:text-left text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
-                Contact me
-            </h1>
+
+                <h1 className=" px-12 p-5 font-semibold text-transparent text-center md:text-left text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
+                    Contact me
+                </h1>
 
             {/* Contact Form */}
+            { status && renderAlert()}
             <section className=" text-black flex justify-center mt-3">
-                <form id="form" ref={form} onSubmit={sendEmail} className="space-y-3 w-1/2">
+                <form onSubmit={handleSubmit} className="space-y-3 w-1/2">
 
-                    <div className=" ">
-                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your name</label>
-                        <input type="text" 
-                                name="name" 
-                                className=" p-1 rounded-md w-full" 
+                    {/* NAME */}
+                    <InputField 
+                                value={values.fullName}
+                                handleChange={handleChange}
+                                label="Full name"
+                                name="fullName"
+                                type="text"
                                 placeholder="E. g. Joe"
-                                required />
-                    </div>
+                    />
 
-                    <div>
-                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Your email</label>
-                        <input type="email" 
-                                name="from_name" 
-                                placeholder="name@mail.com" 
-                                className="p-1 rounded-md w-full" 
-                                required />                        
-                    </div>
+                    {/* EMAIL */}
+                    <InputField
+                                value={values.email}
+                                handleChange={handleChange}
+                                label="E-mail"
+                                name="email"
+                                type="email"
+                                placeholder="Joe@example.com" 
+                    />
 
-                    <div>
-                        <label className="block mb-2 text-sm md:text-lg font-medium text-white">Message</label>
-                        <textarea name="message" 
-                                    placeholder="Leave a comment..." 
-                                    rows={4} 
-                                    className="w-full p-1 rounded-md" 
-                                    required />
-                    </div>
+                 
 
-                    {/* Input Submit */}
-                    <input type="submit" 
-                            value="Send" 
-                            className=" w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer" 
-                            />
+                    <TextareaField  value={values.message} 
+                                    handleChange={handleChange} 
+                                    label="Your message" 
+                                    name="message"    
+                     />
 
+                            <button type="submit"
+                                    className="w-full bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1 font-bold text-white text-xl rounded hover:text-black duration-500 cursor-pointer"
+                            >Send 
+                            </button>
                 </form>
             </section>
+
 
             {/* Accounts */}
                 <div className="flex justify-center px-14 mt-10">
@@ -94,7 +131,7 @@ const Contact = () =>{
 
 
             {/* Footer */}
-            <div className=" 2xl:fixed bottom-0 left-0 w-screen">
+            <div className=" lg:fixed bottom-0 left-0 w-screen">
                 <Footer />
             </div>
 

@@ -1,25 +1,35 @@
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { useState } from "react";
 
 import data from "../data"
-import { useState, useEffect } from "react";
+
 
 const OneProjectSlider = () =>{
-    const[index, setIndex] = useState(0)
-    
-    return(
-        <section className="">
-            <div className=" flex flex-row w-96 h-96 text-center relative">
-                {data.map( (oneProject, oneMovieIndex) =>{
-                    const { id, image, title, description} = oneProject
 
-                    return <article key={id} className="">
-                        <img src={image} alt="picture" className=" h-10"/>
-                        <h2 className="">{title}</h2>
-                        <p className="">{description}</p>
-                    </article>
-                })}
-            </div>
-             
+    const[projectList, setProjectList] = useState(data)
+
+    return (
+        <section className=" md:grid md:grid-cols-2 xl:grid-cols-3 px-8 md:p-5">
+             {
+                projectList.map( (oneProject) =>{
+                    const {id, image, title, description, link} = oneProject
+
+                    return (
+                        <div key={id} className=" my-4 mx-2 border-2 bg-white text-black">
+                            <img src={image} alt="image" className=" h-64 w-full "/>
+                            <h2 className=" font-semibold text-center text-2xl my-1">{title}</h2>
+                            <p className=" text-center w-3/4 block mx-auto mb-3">{description}</p>
+
+                            {/* <button 
+                                className=" block mx-auto my-2 bg-gradient-to-l from-yellow-900 to-yellow-700 px-3 py-2 font-semibold text-2xl text-white hover:text-black duration-500 rounded"
+                                type="button">
+                                    <a href={link} target="_blank">
+                                        View here
+                                    </a>
+                                </button> */}
+                        </div>
+                    )    
+                })
+             }
         </section>
     )
 }

@@ -61,11 +61,11 @@ const Nav = () => {
                     </div>
 
                     {/* RESUME Button */}
-                    <div>
+                    {/* <div>
                         <button className=" lg:ml-3 bg-gradient-to-l from-orange-800 to-yellow-700 px-4 py-1  text-2xl rounded-full hover:text-black duration-500">
                             Resume
                         </button>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
