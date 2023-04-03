@@ -1,7 +1,6 @@
 import React  from "react";
 import Nav from "../components/Nav"
 import { TypeAnimation } from "react-type-animation"
-// import Image from "../../../dist/assets/Web-designer-31c43f73.webp"
 
 import Image from '../../dist/assets/Web-designer-31c43f73.webp'
 
@@ -66,7 +65,7 @@ const Home = () => {
 
                 {/* Right */}
                 <div className="md:w-1/2 w-full">
-                    <img src={Image} alt="Img" className=" h-96 block mx-auto mt-20" />
+                    <img src="../../dist/assets/Web-designer-31c43f73.webp" alt="Img" className=" h-96 block mx-auto mt-20" />
                 </div>
 
             </section>
