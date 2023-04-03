@@ -17,7 +17,6 @@ const allProjects = [
         image: image2,
         title: "PC Pohotovost Karvina",
         description: "One of my first project. This project was created only in HTML and CSS",
-        link: "https://1-pc-pohotovost.cz/",
     },
     {
         id: 3,
