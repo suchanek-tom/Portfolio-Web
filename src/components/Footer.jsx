@@ -16,9 +16,10 @@ const Footer = () =>{
                     <li>
                         <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-suchanek/" class="mr-4 hover:underline md:mr-6">LinkedIn</a>
                     </li>
-                    <li>
+                    {/* TODO: Přidat životopis */}
+                    {/* <li>
                         <a href="#" class="hover:underline">Resume</a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </footer>
