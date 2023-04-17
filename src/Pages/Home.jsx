@@ -2,7 +2,7 @@ import React  from "react";
 import Nav from "../components/Nav"
 import { TypeAnimation } from "react-type-animation"
 
-import  Image  from '../../public/Projects/Web-designer.webp'
+import  Image  from '../../ist/'
 
 // ICONS
 import { SiGithub } from "react-icons/si";
