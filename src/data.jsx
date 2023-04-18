@@ -1,8 +1,8 @@
 import React from "react"
 
-import image1 from '../dist/assets/Green-Deal-Web-1-56ef03dc.png'
-import image2 from "../dist/assets/PC-Pohotovost-Web-672b997e.png"
-import image3 from "../dist/assets/informationboard-68d14d91.png"
+import image1 from './public/Projects/Green-Deal-Web-1.png'
+import image2 from './public/Projects/PC-Pohotovost-Web.png'
+import image3 from './public/Projects/informationboard.png'
 
 const allProjects = [
     {

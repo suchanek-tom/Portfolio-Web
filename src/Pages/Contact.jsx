@@ -131,7 +131,7 @@ const Contact = () => {
 
 
             {/* Footer */}
-            <div className=" fixed bottom-0 left-0 w-screen">
+            <div className=" lg:fixed bottom-0 left-0 w-screen">
                 <Footer />
             </div>
 
