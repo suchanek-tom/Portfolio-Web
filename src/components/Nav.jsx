@@ -46,12 +46,12 @@ const Nav = () => {
                             isActive ? "text-yellow-500 font-semibold" : ""
                         }>Home</NavLink>
                     </div>
-                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
+                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500  text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
                         <NavLink to="/about"  className={({ isActive }) =>
                             isActive ? "text-yellow-500 font-semibold" : ""
                         }>About</NavLink>
                     </div>
-                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
+                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500  text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
                         <NavLink to="/projects" className={({ isActive }) =>
                             isActive ? "text-yellow-500 font-semibold" : ""
                         }>Projects</NavLink>
