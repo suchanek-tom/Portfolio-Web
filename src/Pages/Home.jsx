@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation"
 
 import  Image  from '../public/Web-designer.webp'
 
+
 // ICONS
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";

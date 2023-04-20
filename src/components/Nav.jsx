@@ -10,7 +10,9 @@ const Nav = () => {
         return (
         <nav className="flex items-center justify-between flex-wrap p-6">
             <div className="flex items-center text-3xl flex-shrink-0 text-white mr-6 lg:mr-72">
-                Portfolio
+                       <NavLink to="/"  className={({ isActive }) =>
+                            isActive ? "text-white" : ""
+                        }>Portfolio </NavLink>
             </div>
 
             {/* Hamburger */}
@@ -19,14 +21,14 @@ const Nav = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400">
                 <svg
-                className={`fill-current h-5 w-5 ${isOpen ? "hidden" : "block"}`}
+                className={`fill-current h-6 w-6 ${isOpen ? "hidden" : "block"}`}
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
                 >
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                 </svg>
                 <svg
-                className={`fill-current h-5 w-5 ${isOpen ? "block" : "hidden"}`}
+                className={`fill-current h-6 w-6 ${isOpen ? "block" : "hidden"}`}
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
                 >
@@ -39,24 +41,24 @@ const Nav = () => {
             <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
                 <div className="text-sm lg:flex lg:flex-grow justify-end text-center">
 
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
+                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
                         <NavLink to="/"  className={({ isActive }) =>
-                            isActive ? "text-yellow-500" : ""
+                            isActive ? "text-yellow-500 font-semibold" : ""
                         }>Home</NavLink>
                     </div>
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
+                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500  text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
                         <NavLink to="/about"  className={({ isActive }) =>
-                            isActive ? "text-yellow-500" : ""
+                            isActive ? "text-yellow-500 font-semibold" : ""
                         }>About</NavLink>
                     </div>
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
+                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500  text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
                         <NavLink to="/projects" className={({ isActive }) =>
-                            isActive ? "text-yellow-500" : ""
+                            isActive ? "text-yellow-500 font-semibold" : ""
                         }>Projects</NavLink>
                     </div>
-                    <div className="lg:mx-3 hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 py-2 md:py-0">
+                    <div className="lg:mx-3 border-2 lg:border-none rounded-lg hover:text-yellow-500 text-3xl duration-500 active:text-yellow-500 my-2 lg:my-0 py-1 lg:py-0">
                         <NavLink to="/contact" className={({ isActive }) =>
-                            isActive ? "text-yellow-500" : ""
+                            isActive ? "text-yellow-500 font-semibold" : ""
                         }>Contact</NavLink>
                     </div>
 
