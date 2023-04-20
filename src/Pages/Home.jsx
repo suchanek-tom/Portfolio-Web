@@ -19,12 +19,12 @@ const Home = () => {
 
                 {/* Left */}
                 <div className="md:w-1/2 w-screen">
-                    <h1 className="mt-24 px-12 text-2xl text-center md:text-left md:text-4xl">Hello, I am</h1>
-                    <h1 className=" hover:animate-pulse px-12 mt-2 font-semibold text-transparent text-center md:text-left text-5xl md:text-7xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
+                    <h1 className="mt-24 px-12 text-2xl text-center md:text-left md:text-4xl 2xl:text-6xl">Hello, I am</h1>
+                    <h1 className=" hover:animate-pulse px-12 mt-2 font-semibold text-transparent text-center md:text-left text-5xl md:text-7xl 2xl:text-9xl bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900">
                         Tomáš Suchanek
                     </h1>
 
-                    <p className="px-14 mt-8 text-xl text-center md:text-left md:text-3xl text-white font-semibold">
+                    <p className="px-14 mt-8 text-xl text-center md:text-left md:text-3xl 2xl:text-5xl text-white font-semibold">
                         <TypeAnimation
                             sequence={[
                                 'Web developer', 
